@@ -38,7 +38,8 @@
 ### 2. HMA 或许存在
 
 - **检测项：** 检测不到 Scene 应用，但检测到了 Scene 端口。
-- **解决方法：** [Scene-Port-Hider-by-eBPF]( https://github.com/Andrea-lyz/Scene-Port-Hider-by-eBPF  )
+- **解决方法：** 如果你是老版本/破解版/非官方版本scene，参考[Scene-Port-Hider-by-eBPF]( https://github.com/Andrea-lyz/Scene-Port-Hider-by-eBPF  )；如果你是官方版本scene，那去官网更新到最新版本即可。
+> 如遇网址无法打开请自行解决网络问题。
 
 ---
 
@@ -329,7 +330,8 @@ check_reset_prop "ro.boot.avb_version" "1.3"
 ### 36. 检测到 Scene 端口占用
 
 - **检测项：** 检测到 Scene 工具箱占用的端口。
-- **解决方法：** [Scene-Port-Hider-by-eBPF]( https://github.com/Andrea-lyz/Scene-Port-Hider-by-eBPF ) **请自行解决网络问题**（可以无视）
+- **解决方法：** 如果你是老版本/破解版/非官方版本scene，参考[Scene-Port-Hider-by-eBPF]( https://github.com/Andrea-lyz/Scene-Port-Hider-by-eBPF  )；如果你是官方版本scene，那去官网更新到最新版本即可。
+> 如遇网址无法打开请自行解决网络问题。
 
 ---
 
