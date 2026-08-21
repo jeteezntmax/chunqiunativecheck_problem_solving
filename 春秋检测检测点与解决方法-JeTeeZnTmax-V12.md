@@ -24,6 +24,11 @@
 
 ---
 
+## 🌐 GitHub文档链接
+
+> 🔗 github markdown：[点此进入]( https://github.com/jeteezntmax/chunqiunativecheck_problem_solving )
+
+
 ## 📋 全部检测点（共 95 项）
 
 ---
@@ -91,8 +96,8 @@ selinux_hook模块使用说明：
 
 ### 7. Futile hide 1
 
-- **检测项：** 极少出现的未知异常。
-- **解决方法：** ❗暂时未知，暂无可靠解决方案。
+- **检测项：** 检测到试图隐藏自身的外挂/驱动。
+- **解决方法：** 重启再测。
 
 ---
 
@@ -239,14 +244,14 @@ done
 ### 25. Mount loophole
 
 - **检测项：** 检测到挂载空洞。
-- **解决方法：** 使用 Zygisk Next 的排除策略 →「仅还原挂载」；或卸载/更换元模块。
+- **解决方法：** 使用 Zygisk Next 的排除策略 →「仅还原挂载」；或卸载/更换元模块(推荐mountify)。
 
 ---
 
 ### 26. Magic Mount
 
 - **检测项：** 检测到 Magic Mount 挂载。
-- **解决方法：** 使用 Zygisk Next 的排除策略 →「仅还原挂载」；或卸载/更换元模块。
+- **解决方法：** 使用 Zygisk Next 的排除策略 →「仅还原挂载」；或卸载/更换元模块(推荐mountify)。
 
 ---
 
@@ -283,7 +288,7 @@ done
 ### 31. KernelSU loop device
 
 - **检测项：** 检测到 KSU 循环设备。
-- **解决方法：** 更新管理器并重新修补；或关闭 / 更换元模块。
+- **解决方法：** 更新管理器并重新修补；或关闭 / 更换元模块(推荐mountify)。
 
 ---
 
@@ -323,7 +328,7 @@ check_reset_prop "ro.boot.avb_version" "1.3"
 
 - **检测项：** 检测到 LSPosed Hook 框架。
 - **解决方法：** 更新 LSPosed；排查是否有 XP 模块修改导致。
-> 也可能是元模块导致的，卸载/更换为mountify？
+> 也可能是元模块(推荐mountify)导致的，卸载/更换为mountify？
 
 ---
 
@@ -447,7 +452,7 @@ su -c umount /debug_ramdisk
 ### 50. Futile hide 04
 
 - **检测项：** 检测挂载命名空间异常。
-- **解决方法：** 更换「元模块」。
+- **解决方法：** 更换「元模块(推荐mountify)」。
 
 ---
 
@@ -464,7 +469,7 @@ su -c umount /debug_ramdisk
 ### 52. 挂载间隙
 
 - **检测项：** 检测挂载异常。
-- **解决方法：** 更换「元模块」/更新 ROOT 管理器并重新修补/如果你使用scene，请更新scene。
+- **解决方法：** 更换「元模块(推荐mountify)」/更新 ROOT 管理器并重新修补/如果你使用scene，请更新scene。
 
 ---
 
@@ -803,7 +808,7 @@ TRICKY_DATA="/data/adb/tricky_store"
 ### 94. 证书链篡改（x）
 
 - **检测项：** 检测到设备密钥证书链不完整/被吊销/篡改。
-- **解决方法：** 确保你是最新的TeeSimulator(RS)，点击模块的执行按钮清除缓存密钥，再导入未被吊销的新密钥。
+- **解决方法：** 刷入云盘内的模块即可。
 
 ---
 
