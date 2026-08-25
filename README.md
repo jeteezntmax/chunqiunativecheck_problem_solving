@@ -2,7 +2,7 @@
 
 ## 📄 文档
 
-[春秋检测检测点与解决方法-JeTeeZnTmax-V12.md](./春秋检测检测点与解决方法-JeTeeZnTmax-V12.md)
+[春秋检测检测点与解决方法-JeTeeZnTmax-V13.md](./春秋检测检测点与解决方法-JeTeeZnTmax-V13.md)
 
 ## 📜 授权声明
 
