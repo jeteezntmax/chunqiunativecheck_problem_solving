@@ -329,7 +329,7 @@ check_reset_prop "ro.boot.avb_version" "1.3"
 
 - **检测项：** 检测到 LSPosed Hook 框架。
 - **解决方法：** 更新 LSPosed；排查是否有 XP 模块修改导致。
-> 也可能是元模块(推荐mountify)导致的，卸载/更换为mountify？
+> 也可能是元模块导致的，卸载/更换为mountify？
 
 ---
 
@@ -612,6 +612,7 @@ A：某些改机模块因为各种原因有残留/某些行为不可逆
 > 推荐使用以下脚本一键添加所有包名
 
 ```
+su
 TRICKY_DATA="/data/adb/tricky_store"
 {
             echo "com.google.android.gms!"
@@ -789,7 +790,7 @@ TRICKY_DATA="/data/adb/tricky_store"
 - **解决方法：** 
   - 🔹 **KSU 系 · LKM：** 以下方法任选其一：
   刷入对应版本的pathmask，在防护一栏中启用 **启用隔离防护(procguard)** 。
-  刷入Zn-Audit-Patch模块尝试解决(不推荐，可能导致泄露其它检测点)。
+  刷入Zn-Audit-Patch模块尝试解决(可能导致泄露其它检测点)。
   - 🔹 **KSU 系 · GKI：** 在设置中打开AVC日志欺骗。
 > 牛大了穷举法都来了。
 > 如果实在不行的话又想过检测可以去设置禁用传统su支持，去过一遍春秋再打开。
@@ -860,12 +861,13 @@ su -c settings put global adb_enabled 0
 
 ### 98. 挂载异常（X）
 
-- **检测项：** 检测到一些模块的挂载。
+- **检测项：** 检测到一些模块/应用的挂载。
 - **解决方法：**
   - 🔹 **KSU 系 · LKM：** 刷入你的安卓版本和内核版本相对应的pathmask，并在隐藏路径中写上**春秋检测挂载异常这个词条展开以后给的/dev/block/????(并不是写问号而是填入展开以后的具体路径)**，随后保存并热重载。
   - 🔹 **KSU 系 · GKI - 内核集成susfs：** 在susfs中填上相应隐藏路径(参考pathmask)。
   - 🔹 **KSU 系 · GKI - 内核没有集成susfs：** 参考lkm的方法。
   - 🔹 **其它管理器** 没招了兄弟。
+  - 🔹 **如果展开以后出现overlay的字样** 更换元模块(推荐mountify)。
 > 如果你没有找到对应版本的pathmask那也没招了。
 > 如果是某个模块导致的挂载异常(大概率就是模块导致的)，那么卸载它也可以解决。
 
